@@ -1,6 +1,6 @@
 package com.alterevit.gorodminiapp.library
 
-interface MiniAppEventListener{
+interface MiniAppCallback{
 
     fun getUid(): String?
 
