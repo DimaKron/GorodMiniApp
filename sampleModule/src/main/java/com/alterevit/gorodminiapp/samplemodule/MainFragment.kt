@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.alterevit.gorodminiapp.library.MiniAppEventListener
+import com.alterevit.gorodminiapp.library.MiniAppCallback
 import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainFragment: Fragment(){
@@ -15,11 +15,11 @@ class MainFragment: Fragment(){
         fun newInstance() = MainFragment()
     }
 
-    private var eventListener: MiniAppEventListener? = null
+    private var eventListener: MiniAppCallback? = null
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        eventListener = context as? MiniAppEventListener
+        eventListener = context as? MiniAppCallback
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View  =

@@ -2,11 +2,11 @@ package com.alterevit.gorodminiapp.sample
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.alterevit.gorodminiapp.library.MiniAppEventListener
+import com.alterevit.gorodminiapp.library.MiniAppCallback
 import com.alterevit.gorodminiapp.samplemodule.MainFragment
 import java.util.*
 
-class MainActivity : AppCompatActivity(), MiniAppEventListener {
+class MainActivity : AppCompatActivity(), MiniAppCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
