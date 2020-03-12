@@ -1,2 +1,2 @@
-include ':sampleApp', ':sampleModule'
+include ':sampleApp', ':sampleModule', ':library'
 rootProject.name='GorodMiniApp'
