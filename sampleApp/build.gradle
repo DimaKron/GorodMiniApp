@@ -34,7 +34,7 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.2.0'
 
     // MiniApp Binding Library
-    implementation 'ru.rtgsoft.gitlab.Kroshchkin:gorodminiapp:-SNAPSHOT'
+    implementation 'ru.rtgsoft.gitlab.Kroshchkin:gorodminiapp:1.0'
 
     // Sample Module
     implementation project(':sampleModule')

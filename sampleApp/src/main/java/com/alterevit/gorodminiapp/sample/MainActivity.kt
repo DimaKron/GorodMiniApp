@@ -1,10 +1,12 @@
 package com.alterevit.gorodminiapp.sample
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.alterevit.gorodminiapp.library.MiniAppEventListener
 import com.alterevit.gorodminiapp.samplemodule.MainFragment
+import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MiniAppEventListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,4 +18,6 @@ class MainActivity : AppCompatActivity() {
                 .commit()
         }
     }
+
+    override fun getUid() = "RaNdoM_uID${UUID.randomUUID()}"
 }

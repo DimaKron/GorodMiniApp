@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.alterevit.gorodminiapp.library.MiniAppEventListener
 import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainFragment: Fragment(){
@@ -14,8 +15,11 @@ class MainFragment: Fragment(){
         fun newInstance() = MainFragment()
     }
 
+    private var eventListener: MiniAppEventListener? = null
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
+        eventListener = context as? MiniAppEventListener
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View  =
@@ -24,7 +28,7 @@ class MainFragment: Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        button.setOnClickListener { textView.text = "123" } // TODO
+        button.setOnClickListener { textView.text = eventListener?.getUid() }
     }
 
 }
