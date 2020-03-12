@@ -1,6 +1,6 @@
-include ':sampleApp', ':library'
-
-if (!System.env.JITPACK)
-    include ':sampleModule'
+if (System.env.JITPACK)
+    include ':library'
+else
+    include ':sampleApp', ':sampleModule', ':library'
 
 rootProject.name='GorodMiniApp'
