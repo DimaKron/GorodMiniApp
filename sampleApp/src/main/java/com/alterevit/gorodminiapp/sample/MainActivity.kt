@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity(), MiniAppCallback {
         }
     }
 
-    override fun getUid() = Random.nextLong()
+    override fun getToken() = "RaNDoMTokeN${Random.nextLong()}"
 
     override fun pushFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
