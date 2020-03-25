@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 
 interface MiniAppCallback{
 
-    fun getUid(): Long?
+    fun getToken(): String?
 
     fun pushFragment(fragment: Fragment)
 
