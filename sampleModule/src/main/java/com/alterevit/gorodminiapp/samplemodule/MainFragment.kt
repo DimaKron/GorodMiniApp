@@ -28,7 +28,7 @@ class MainFragment: Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        button.setOnClickListener { textView.text = eventListener?.getUid() }
+        button.setOnClickListener { textView.text = "Random is ${eventListener?.getUid()}" }
     }
 
 }
