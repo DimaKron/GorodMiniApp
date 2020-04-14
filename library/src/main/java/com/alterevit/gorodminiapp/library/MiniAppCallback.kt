@@ -8,4 +8,6 @@ interface MiniAppCallback{
 
     fun pushFragment(fragment: Fragment)
 
+    fun logEvent(action: String, category: String, label: String? = null, value: Long? = null)
+
 }
