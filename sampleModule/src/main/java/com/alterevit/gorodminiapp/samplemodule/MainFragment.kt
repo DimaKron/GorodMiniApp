@@ -28,7 +28,10 @@ class MainFragment: Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        button.setOnClickListener { textView.text = eventListener?.getToken() }
+        button.setOnClickListener {
+            textView.text = eventListener?.getToken()
+            eventListener?.logEvent("buttonClick", "main")
+        }
     }
 
 }

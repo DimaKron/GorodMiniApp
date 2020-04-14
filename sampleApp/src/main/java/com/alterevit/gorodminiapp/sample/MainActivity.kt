@@ -1,6 +1,7 @@
 package com.alterevit.gorodminiapp.sample
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.alterevit.gorodminiapp.library.MiniAppCallback
@@ -27,5 +28,9 @@ class MainActivity : AppCompatActivity(), MiniAppCallback {
             .replace(R.id.containerLayout, MainFragment.newInstance())
             .addToBackStack(null)
             .commit()
+    }
+
+    override fun logEvent(action: String, category: String, label: String?, value: Long?) {
+        Log.d("MainActivity", "$action $category $label $value")
     }
 }
